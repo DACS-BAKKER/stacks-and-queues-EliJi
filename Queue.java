@@ -98,14 +98,4 @@ public class Queue<Item> implements Iterable<Item> {
 
         return JosephusPos;
     }
-
-    public static void main(String[] args) {
-        System.out.println("Running the Josephus Problem.");
-        System.out.println("Number of people? ");
-        int n = StdIn.readInt();
-        System.out.println("Number of people to skip? ");
-        int s = StdIn.readInt();
-        Queue<Integer> q = new Queue<Integer>();
-        q.Josephus(n,s);
-    }
 }
