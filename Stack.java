@@ -22,17 +22,24 @@ public class Stack<Item> implements Iterable<Item>  {
     }
 
     public void push(Item item) {
+        //step 1 in diagram
         Node oldFirst = first;
+        //step 2 in diagram
         first = new Node();
         first.item = item;
         first.next = oldFirst;
+        //step 3 in diagram
         size++;
     }
 
     public Item pop() {
+        //step 1 in diagram
         Item item = first.item;
+        //step 2 in diagram
         first = first.next;
+        //step 3 in diagram
         size--;
+        //step 4 in diagram
         return item;
     }
 

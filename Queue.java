@@ -23,19 +23,27 @@ public class Queue<Item> implements Iterable<Item> {
     }
 
     public void enqueue(Item item) {
+        //1 in diagram
         Node oldLast = last;
+        //2
         last = new Node();
         last.item = item;
         last.next = null;
+        //3
         if(isEmpty()) first = last;
         else oldLast.next = last;
+        //4
         size++;
     }
 
     public Item dequeue() {
+        //1
         Item item = first.item;
+        //2
         first = first.next;
+        //4
         size--;
+        //3
         return item;
     }
 
@@ -84,6 +92,7 @@ public class Queue<Item> implements Iterable<Item> {
             myQ.enqueue(i);
         }
 
+        //repeat until only Josephus is left
         while(myQ.size() > 1){
             //makes s skips
             for(int i = 0; i < s; i++){
